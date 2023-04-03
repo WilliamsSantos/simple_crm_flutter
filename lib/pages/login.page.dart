@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_crm/pages/reset-password.page.dart';
+import 'package:simple_crm/pages/sign-up.page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -124,7 +125,14 @@ class LoginPage extends StatelessWidget {
                 child: const Text(
                   "Cadastrar-se",
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignupPage()
+                    ),
+                  );
+                },
               ),
             ),
           ],
