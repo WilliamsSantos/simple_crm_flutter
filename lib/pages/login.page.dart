@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_crm/pages/reset-password.page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -16,8 +17,8 @@ class LoginPage extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             SizedBox(
-              width: 120,
-              height: 120,
+              width: 100,
+              height: 100,
               child: Image.asset("logo.png"),
             ),
             const SizedBox(
@@ -58,7 +59,14 @@ class LoginPage extends StatelessWidget {
                 child: const Text(
                   "Recuperar Senha",
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ResetPasswordPage()
+                    ),
+                  );
+                },
               ),
             ),
             const SizedBox(
@@ -114,7 +122,7 @@ class LoginPage extends StatelessWidget {
               alignment: Alignment.center,
               child: TextButton(
                 child: const Text(
-                  "Recuperar Senha",
+                  "Cadastrar-se",
                 ),
                 onPressed: () {},
               ),
